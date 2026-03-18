@@ -1,0 +1,17 @@
+@use "reset";
+@use "variables/global" as global;
+@use "themes/light" as light;
+@use "themes/dark" as dark;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  font: global.$font-m;
+  background: light.$bg-color;
+  color: light.$primary-color;
+  min-height: 100vh;
+}
