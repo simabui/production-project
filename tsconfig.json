@@ -9,16 +9,19 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      }
-    ],
+    {
+      "name": "typescript-plugin-css-modules"
+    }
+  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  },
+  }
 }
