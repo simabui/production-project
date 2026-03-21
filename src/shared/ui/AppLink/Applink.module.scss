@@ -1,0 +1,25 @@
+@use "app/styles/themes/light" as light;
+@use "app/styles/themes/dark" as dark;
+
+.appLink{
+  text-decoration: none;
+  color: light.$primary-color;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.primary{
+  color: light.$primary-color;
+}
+.secondary{
+  color: light.$inverted-primary-color; 
+}
+
+:global(.app.dark) .primary {
+  color: dark.$primary-color;
+
+}
+:global(.app.dark) .secondary {
+  color: dark.$inverted-secondary-color;
+
+}

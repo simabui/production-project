@@ -1,0 +1,23 @@
+@use "app/styles/themes/light" as light;
+@use "app/styles/themes/dark" as dark;
+@use "app/styles/variables/global" as global;
+
+.navbar {
+  width: 100%;
+  height: global.$navbar-height;
+  background: light.$inverted-bg-color;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.links{
+  margin-left: auto;
+}
+.mainLink {
+  margin-right: 15px;
+}
+:global(.app.dark) .navbar {
+  background: dark.$inverted-bg-color;
+
+}
