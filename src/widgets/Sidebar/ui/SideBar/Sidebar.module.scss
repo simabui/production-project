@@ -1,0 +1,32 @@
+@use "app/styles/variables/global" as global;
+@use "app/styles/themes/light" as light;
+@use "app/styles/themes/dark" as dark;
+
+.Sidebar {
+  height: calc(100vh - global.$navbar-height);
+  width: 300px;
+  background: light.$inverted-bg-color;
+
+  position: relative;
+  transition: width 0.3s ease;
+}
+.collapsed{
+  width: 80px;
+}
+
+.switchers {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+:global(.app.dark) .Sidebar {
+  background: dark.$inverted-bg-color;
+
+}
+
+.lang{
+  margin-left: 10px;
+}

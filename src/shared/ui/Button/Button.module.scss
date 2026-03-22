@@ -1,4 +1,8 @@
+@use "app/styles/themes/light" as light;
+@use "app/styles/themes/dark" as dark;
+
 .Button{
+  color: light.$primary-color;
   cursor: pointer;
 }
 
@@ -8,4 +12,8 @@
   border: none;
   background: none;
   outline: none;
+}
+
+:global(.app.dark) .Button {
+  color: dark.$primary-color;
 }
