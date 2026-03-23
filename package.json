@@ -9,7 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
-    "build:dev": "webpack --env mode=development"
+    "build:dev": "webpack --env mode=development",
+    "lint:ts": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
+    "lint:ts:fix": "eslint \"src/**/*.{js,ts,jsx,tsx}\" --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
@@ -36,7 +38,11 @@
     "typescript-plugin-css-modules": "^5.2.0",
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.0",
-    "webpack-dev-server": "^5.2.3"
+    "webpack-dev-server": "^5.2.3",
+    "typescript-eslint": "^8.57.1",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0"
   },
   "dependencies": {
     "i18next": "^25.10.3",
