@@ -1,4 +1,5 @@
 {
   "title": "Hello",
-  "main": "Main page"
+  "main": "Main page",
+  "notFound": "Page not found"
 }
