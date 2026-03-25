@@ -1,5 +1,7 @@
 {
   "main": "main",
   "notFound": "notFound",
+  "reloadPage": "reloadPage",
+  "somethingWentWrong": "somethingWentWrong",
   "title": "title"
 }
