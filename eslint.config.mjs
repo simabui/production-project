@@ -16,7 +16,13 @@ export default defineConfig([
     rules: {
       "no-unused-vars": 1,
       "no-undef": 1,
-      "i18next/no-literal-string": ["error", { markupOnly: true }],
+      "i18next/no-literal-string": ["error", { markupOnly: true, ignoreAttribute: ["data-testid"] }],
+    },
+  },
+  {
+    files: ["**/*.test.{js,ts,jsx,tsx}", "**/*.spec.{js,ts,jsx,tsx}", "**/__tests__/**/*.{js,ts,jsx,tsx}"],
+    rules: {
+      "i18next/no-literal-string": "off",
     },
   },
   tseslint.configs.recommended,

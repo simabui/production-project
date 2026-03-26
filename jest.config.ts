@@ -79,7 +79,14 @@ const config: Config = {
   moduleFileExtensions: ["js", "mjs", "cjs", "jsx", "ts", "mts", "cts", "tsx", "json", "node"],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    "\\.(css|scss)$": "<rootDir>/identity-obj-proxy-esm.js",
+    "\\.(png|jpg|jpeg|svg)$": "<rootDir>/src/__mocks__/fileMock.ts",
+    "^shared/(.*)$": "<rootDir>/src/shared/$1",
+    "^widgets/(.*)$": "<rootDir>/src/widgets/$1",
+    "^pages/(.*)$": "<rootDir>/src/pages/$1",
+    "^app/(.*)$": "<rootDir>/src/app/$1",
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -126,7 +133,7 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ["<rootDir>/jest-setup.js"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
