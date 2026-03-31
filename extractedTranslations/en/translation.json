@@ -1,7 +1,9 @@
 {
+  "about": "about",
   "main": "main",
   "notFound": "notFound",
   "reloadPage": "reloadPage",
   "somethingWentWrong": "somethingWentWrong",
-  "title": "title"
+  "title": "title",
+  "toggle": "toggle"
 }

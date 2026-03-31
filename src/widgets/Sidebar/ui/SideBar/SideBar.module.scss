@@ -1,3 +1,4 @@
+/* stylelint-disable selector-pseudo-class-no-unknown */
 @use "app/styles/variables/global" as global;
 @use "app/styles/themes/light" as light;
 @use "app/styles/themes/dark" as dark;
@@ -12,6 +13,16 @@
 
 .collapsed{
   width: 80px;
+
+  .switchers{
+    flex-direction: column;
+  }
+
+  .link{
+    opacity: 0;
+    transition: 0.2s opacity;
+    width: 0;
+  }
 }
 
 .switchers {
@@ -22,12 +33,47 @@
   width: 100%;
 }
 
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :global(.app.dark) .Sidebar {
   background: dark.$inverted-bg-color;
-
 }
 
 .lang{
   margin-left: 10px;
+}
+
+.collapsedBtn{
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
+}
+
+.items{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.link{
+  margin-top: 10px;
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.mainLink {
+  margin-right: 15px;
+}
+
+.item{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  fill: light.$inverted-primary-color;
+}
+
+:global(.app.dark) .icon {
+  fill: dark.$inverted-primary-color;
 }

@@ -1,6 +1,7 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 @use "app/styles/themes/light" as light;
 @use "app/styles/themes/dark" as dark;
+@use "app/styles/variables/global" as global;
 
 .Button{
   color: light.$primary-color;
@@ -17,4 +18,31 @@
 
 :global(.app.dark) .Button {
   color: dark.$primary-color;
+}
+
+.background {
+  background: light.$bg-color;
+  color: light.$primary-color;
+  border: none;
+}
+
+.backgroundInverted {
+  background: dark.$inverted-primary-color;
+  color: dark.$primary-color;
+  border: none;
+}
+
+.square.size_m {
+  width: global.$font-line-m;
+  height: global.$font-line-m;
+}
+
+.square.size_l {
+  width: global.$font-line-l;
+  height: global.$font-line-l;
+}
+
+.square.size_xl {
+  width: global.$font-line-xl;
+  height: global.$font-line-xl;
 }

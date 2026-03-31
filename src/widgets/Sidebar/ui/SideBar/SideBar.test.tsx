@@ -1,17 +1,17 @@
 import { fireEvent, screen } from "@testing-library/react";
 import { withTranslation } from "react-i18next";
 
-import renderWIthTranslation from "shared/lib/tests/renderWIthTranslation/renderWIthTranslation";
+import { componentRender } from "shared/config/componentRender/componentRender";
 import SideBar from "./SideBar";
 
 describe("SideBar", () => {
   test("should render", () => {
     const SideBarWithTranslation = withTranslation()(SideBar);
-    renderWIthTranslation(<SideBarWithTranslation />);
+    componentRender(<SideBarWithTranslation />);
   });
 
   test("should toggle collapsed", async () => {
-    renderWIthTranslation(<SideBar />);
+    componentRender(<SideBar />);
     const toggleBtn = screen.getByTestId("sidebar-toggle");
 
     expect(screen.getByTestId("sidebar")).not.toHaveClass("collapsed");

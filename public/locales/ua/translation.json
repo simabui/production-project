@@ -3,5 +3,7 @@
   "main": "Головна сторінка",
   "notFound": "Сторінка не знайдена",
   "reloadPage": "Перезавантажити сторінку",
-  "somethingWentWrong": "Щось пішло не так"
+  "somethingWentWrong": "Щось пішло не так",
+  "about": "Про нас",
+  "toggle": "Переключити"
 }
