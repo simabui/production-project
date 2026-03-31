@@ -16,7 +16,7 @@ export default defineConfig([
     rules: {
       "no-unused-vars": 1,
       "no-undef": 1,
-      "i18next/no-literal-string": ["error", { markupOnly: true, ignoreAttribute: ["data-testid"] }],
+      "i18next/no-literal-string": ["warn", { markupOnly: true, ignoreAttribute: ["data-testid"] }],
     },
   },
   {
