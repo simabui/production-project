@@ -2,6 +2,12 @@
 @use "themes/light" as light;
 @use "themes/dark" as dark;
 
+:root{
+  font-size: global.$font-size-m;
+  line-height: global.$font-line-m;
+  font-family: global.$font-family-main;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +15,6 @@
 }
 
 .app{
-  font: global.$font-m;
   background: light.$bg-color;
   color: light.$primary-color;
   min-height: 100vh;
@@ -23,3 +28,7 @@
   flex-grow: 1;
   padding: 20px;
 }
+
+button {
+   font-family: inherit;
+  }
