@@ -3,18 +3,24 @@ import { ReactNode } from "react";
 import { I18nextProvider } from "react-i18next";
 import { MemoryRouter } from "react-router-dom";
 
+import { StoreProvider } from "app/providers/StoreProvider";
+import { StateSchema } from "entities/Counter/index";
 import i18n from "../i18n/i18nTest";
 
 export interface componentRenderOptions {
   route?: string;
+  initialState?: StateSchema;
 }
 
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
-  const { route = "/" } = options;
+  const { route = "/", initialState } = options;
 
   return render(
-    <MemoryRouter initialEntries={[route]}>
-      <I18nextProvider i18n={i18n}>{component}</I18nextProvider>
-    </MemoryRouter>,
+    <StoreProvider initialState={initialState}>
+      <MemoryRouter initialEntries={[route]}>
+        <I18nextProvider i18n={i18n}>{component}</I18nextProvider>
+      </MemoryRouter>
+      ,
+    </StoreProvider>,
   );
 }
