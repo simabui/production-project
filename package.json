@@ -6,6 +6,7 @@
   "author": "ADB",
   "main": "index.js",
   "scripts": {
+    "mock": "node mock-server/index.mjs",
     "test": "jest --config ./jest.config.ts",
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
@@ -45,6 +46,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
+    "json-server": "^1.0.0-beta.15",
     "mini-css-extract-plugin": "^2.10.1",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.98.0",
