@@ -6,5 +6,8 @@
   "somethingWentWrong": "Щось пішло не так",
   "about": "Про нас",
   "toggle": "Переключити",
-  "enter": "Увійти"
+  "enter": "Увійти",
+  "inputName": "Ім'я",
+  "inputPassword": "Пароль",
+  "buttonLogin": "Увійти"
 }

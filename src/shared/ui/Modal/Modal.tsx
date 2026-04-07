@@ -8,12 +8,16 @@ export interface ModalProps {
   children?: React.ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
+  lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
-export default function Modal({ className, children, isOpen, onClose }: ModalProps) {
+export default function Modal({ className, children, isOpen, onClose, lazy }: ModalProps) {
   const [isClosing, setIsClosing] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   useEffect(() => {
     if (isOpen) {
       window.addEventListener("keydown", onKeydown);
@@ -26,7 +30,16 @@ export default function Modal({ className, children, isOpen, onClose }: ModalPro
     };
   }, [isOpen]);
 
-  const mods: Record<string, boolean> = {
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+    }
+    return () => {
+      setIsMounted(false);
+    };
+  }, [isOpen]);
+
+  const mods: Record<string, boolean | undefined> = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing,
   };
@@ -49,6 +62,8 @@ export default function Modal({ className, children, isOpen, onClose }: ModalPro
   function contentHandler(e: React.MouseEvent) {
     e.stopPropagation();
   }
+
+  if (lazy && !isMounted) return null;
 
   return (
     <Portal>

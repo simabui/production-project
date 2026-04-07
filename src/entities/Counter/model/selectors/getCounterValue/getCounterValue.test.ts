@@ -7,6 +7,12 @@ describe("getCounterValue", () => {
       counter: {
         value: 10,
       },
+      user: {
+        authData: {
+          id: "1",
+          username: "test",
+        },
+      },
     };
 
     expect(getCounterValue(state)).toEqual(10);

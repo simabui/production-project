@@ -5,5 +5,8 @@
   "reloadPage": "Reload Page",
   "somethingWentWrong": "Something went wrong",
   "toggle": "Toggle",
-  "enter": "Enter"
+  "enter": "Enter",
+  "inputName": "Input name",
+  "inputPassword": "Input password",
+  "buttonLogin": "Login"
 }

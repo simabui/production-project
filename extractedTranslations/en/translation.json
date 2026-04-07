@@ -1,6 +1,9 @@
 {
   "about": "about",
+  "buttonLogin": "buttonLogin",
   "enter": "enter",
+  "inputName": "inputName",
+  "inputPassword": "inputPassword",
   "main": "main",
   "notFound": "notFound",
   "reloadPage": "reloadPage",
