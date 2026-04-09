@@ -1,0 +1,36 @@
+/* stylelint-disable selector-pseudo-class-no-unknown */
+@use "app/styles/themes/light" as light;
+@use "app/styles/themes/dark" as dark;
+@use "app/styles/variables/global" as global;
+
+.Text{
+width: auto;
+}
+
+.title{
+ font: global.$font-size-l;
+ color: light.$primary-color;
+}
+
+.text{
+ font: global.$font-size-m;
+ color: light.$secondary-color;
+}
+
+.error{
+  .title{
+    color: global.$red-light;
+  }
+
+  .text{
+    color: global.$red-dark;
+  }
+}
+
+:global(.app.dark) .title {
+  color: dark.$primary-color;
+}
+
+:global(.app.dark) .text {
+  color: dark.$secondary-color;
+} 

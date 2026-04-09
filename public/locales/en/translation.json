@@ -8,5 +8,8 @@
   "enter": "Enter",
   "inputName": "Input name",
   "inputPassword": "Input password",
-  "buttonLogin": "Login"
+  "buttonLogin": "Login",
+  "formTitle": "Authorization form",
+  "errorAuth": "Incorrect name or password".
+  "logout": "Logout"
 }

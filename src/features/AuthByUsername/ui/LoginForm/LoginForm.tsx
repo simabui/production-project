@@ -7,6 +7,7 @@ import { loginByUsername } from "features/AuthByUsername/services/loginByUsernam
 import { classNames } from "shared/lib/classNames/classNames";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import Input from "shared/ui/Input/Input";
+import { Text, TextTheme } from "shared/ui/Text/Text";
 import { loginActions } from "../../model/slice/loginSlice";
 import * as cls from "./LoginForm.module.scss";
 
@@ -34,7 +35,8 @@ export function LoginForm({ className }: LoginFormProps) {
 
   return (
     <div className={classNames(cls.LoginForm, {}, [className])}>
-      <h2>{loginForm?.error}</h2>
+      <Text title={t("formTitle")} />
+      {loginForm?.error && <Text text={loginForm.error} theme={TextTheme.ERROR} />}
       <Input
         type="text"
         placeholder={t("inputName")}

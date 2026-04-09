@@ -9,5 +9,8 @@
   "enter": "Увійти",
   "inputName": "Ім'я",
   "inputPassword": "Пароль",
-  "buttonLogin": "Увійти"
+  "buttonLogin": "Увійти",
+  "formTitle": "Форма авторизації",
+  "errorAuth": "Невірне ім'я або пароль",
+  "logout": "Вихід"
 }
