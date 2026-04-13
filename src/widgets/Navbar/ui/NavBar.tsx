@@ -40,7 +40,7 @@ export default function NavBar({ className }: NavBarProps) {
       <Button theme={ThemeButton.CLEAR_INVERTED} className={cls.links} onClick={onToggleModal}>
         {t("enter")}
       </Button>
-      <LoginModal isOpen={isAuthModal} onClose={onToggleModal} />
+      {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onToggleModal} />}
     </div>
   );
 }

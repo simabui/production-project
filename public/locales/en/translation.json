@@ -10,6 +10,6 @@
   "inputPassword": "Input password",
   "buttonLogin": "Login",
   "formTitle": "Authorization form",
-  "errorAuth": "Incorrect name or password".
+  "errorAuth": "Incorrect name or password",
   "logout": "Logout"
 }
