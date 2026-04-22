@@ -17,9 +17,10 @@ import * as cls from "./LoginForm.module.scss";
 
 export interface LoginFormProps {
   className?: string;
+  onSuccess: () => void;
 }
 
-export default function LoginForm({ className }: LoginFormProps) {
+export default function LoginForm({ className, onSuccess }: LoginFormProps) {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
 
@@ -37,8 +38,10 @@ export default function LoginForm({ className }: LoginFormProps) {
   }
 
   async function onLoginClick() {
-    const result = await loginByUsername({ username, password });
-    dispatch(result);
+    const result = await dispatch(loginByUsername({ username, password }));
+    if (result.meta.requestStatus === "fulfilled") {
+      onSuccess();
+    }
   }
 
   return (

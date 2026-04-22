@@ -1,0 +1,33 @@
+/* stylelint-disable selector-pseudo-class-no-unknown */
+@use "app/styles/variables/global" as global;
+@use "app/styles/themes/light" as light;
+@use "app/styles/themes/dark" as dark;
+
+.item{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  fill: light.$inverted-primary-color;
+}
+
+.link{
+  margin-top: 10px;
+  margin-left: 10px;
+  opacity: 1;
+}
+
+
+.collapsed{
+  .link{
+    opacity: 0;
+    transition: 0.2s opacity;
+    width: 0;
+  }
+}
+
+:global(.app.dark) .icon {
+  fill: dark.$inverted-primary-color;
+}

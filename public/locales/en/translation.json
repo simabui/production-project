@@ -11,5 +11,6 @@
   "buttonLogin": "Login",
   "formTitle": "Authorization form",
   "errorAuth": "Incorrect name or password",
-  "logout": "Logout"
+  "logout": "Logout",
+  "profile": "Profile"
 }

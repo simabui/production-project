@@ -11,7 +11,14 @@
     { "id": "2", "text": "another comment about post 1", "postId": "1" }
   ],
   "profile": {
-    "name": "typicode"
-  },
+    "first": "Dyk",
+    "lastname": "Bui",
+    "age": 22,
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Kyiv",
+    "username": "admin",
+    "avatar": "https://upload.wikimedia.org/wikipedia/uk/4/48/Cyberpunk_2077_poster.jpg"
+  }
   "users": [{ "id": "1", "username": "max" }]
 }
