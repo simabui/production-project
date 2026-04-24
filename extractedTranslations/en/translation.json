@@ -1,6 +1,7 @@
 {
   "about": "about",
   "buttonLogin": "buttonLogin",
+  "edit": "edit",
   "enter": "enter",
   "errorAuth": "",
   "formTitle": "formTitle",
@@ -9,6 +10,9 @@
   "logout": "logout",
   "main": "main",
   "notFound": "notFound",
+  "placeholderLastName": "placeholderLastName",
+  "placeholderName": "placeholderName",
+  "profile": "profile",
   "reloadPage": "reloadPage",
   "somethingWentWrong": "somethingWentWrong",
   "title": "title",

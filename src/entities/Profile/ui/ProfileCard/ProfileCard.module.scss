@@ -1,0 +1,28 @@
+/* stylelint-disable selector-pseudo-class-no-unknown */
+@use "app/styles/themes/light" as light;
+@use "app/styles/themes/dark" as dark;
+
+.ProfileCard{
+  padding: 20px;
+  border: 2px solid light.$inverted-bg-color
+}
+
+:global(.app.dark) .ProfileCard {
+  border: 2px solid dark.$inverted-secondary-color;
+}
+
+.header{
+  display: flex;
+}
+
+.editBtn{
+  margin-left: auto;
+}
+
+.data{
+  margin-top: 30px;
+}
+
+.input{
+  margin-top: 10px;
+}

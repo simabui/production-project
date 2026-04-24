@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, useEffect, useRef, useState } from "react";
+import { InputHTMLAttributes, memo, useEffect, useRef, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import * as cls from "./Input.module.scss";
 
@@ -10,7 +10,7 @@ interface InputProps extends HTMLInputProps {
 }
 const CART_WIDTH = 9.5;
 
-export default function Input({ value, onChange, type = "text", placeholder, autoFocus, ...rest }: InputProps) {
+export default memo(function Input({ value, onChange, type = "text", placeholder, autoFocus, ...rest }: InputProps) {
   const [isFocused, setIsFocused] = useState(false);
   const [caretPosition, setCaretPosition] = useState(0);
   const ref = useRef<HTMLInputElement>(null);
@@ -59,4 +59,4 @@ export default function Input({ value, onChange, type = "text", placeholder, aut
       </div>
     </div>
   );
-}
+});

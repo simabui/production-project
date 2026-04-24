@@ -19,6 +19,6 @@
     "city": "Kyiv",
     "username": "admin",
     "avatar": "https://upload.wikimedia.org/wikipedia/uk/4/48/Cyberpunk_2077_poster.jpg"
-  }
+  },
   "users": [{ "id": "1", "username": "max" }]
 }
